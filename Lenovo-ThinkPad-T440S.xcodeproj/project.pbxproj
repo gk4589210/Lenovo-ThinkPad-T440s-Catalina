@@ -6,10 +6,19 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		DF456A802169646E002B77D7 /* SystemLogo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SystemLogo; sourceTree = "<group>"; };
+		DF456A812169646F002B77D7 /* hotpatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hotpatch; sourceTree = "<group>"; };
+		DF456A822169646F002B77D7 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		DF4A341621641DA800C74135 = {
 			isa = PBXGroup;
 			children = (
+				DF456A822169646F002B77D7 /* config.plist */,
+				DF456A812169646F002B77D7 /* hotpatch */,
+				DF456A802169646E002B77D7 /* SystemLogo */,
 			);
 			sourceTree = "<group>";
 		};
