@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		DF4274632169762D0052502D /* SSDT-T440S.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-T440S.aml"; sourceTree = "<group>"; };
 		DF456A802169646E002B77D7 /* SystemLogo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SystemLogo; sourceTree = "<group>"; };
 		DF456A812169646F002B77D7 /* hotpatch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hotpatch; sourceTree = "<group>"; };
 		DF456A822169646F002B77D7 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
@@ -18,6 +19,7 @@
 		DF4A341621641DA800C74135 = {
 			isa = PBXGroup;
 			children = (
+				DF4274632169762D0052502D /* SSDT-T440S.aml */,
 				DF456A822169646F002B77D7 /* config.plist */,
 				DF6C8E392169674600574F1D /* kexts */,
 				DF6C8E382169670500574F1D /* Audio */,
