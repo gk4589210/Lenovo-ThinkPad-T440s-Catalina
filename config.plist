@@ -17,7 +17,7 @@
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixMutex</key>
@@ -408,11 +408,13 @@
 				<data>EgQAAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-con1-flags</key>
+				<key>framebuffer-con1-alldata</key>
+				<data>AQUSAAAIAACHAAAA</data>
+				<key>#framebuffer-con1-flags</key>
 				<data>BgAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
+				<key>#framebuffer-con1-pipe</key>
 				<data>EgAAAA==</data>
-				<key>framebuffer-con1-type</key>
+				<key>#framebuffer-con1-type</key>
 				<data>AAQAAA==</data>
 				<key>framebuffer-con2-enable</key>
 				<integer>1</integer>
