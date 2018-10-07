@@ -442,6 +442,8 @@
 			<dict>
 				<key>#PinConfigurations</key>
 				<data></data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>layout-id</key>
 				<integer>2</integer>
 			</dict>
@@ -506,6 +508,8 @@
 		</dict>
 		<key>Theme</key>
 		<string>Embedded</string>
+		<key>EmbeddedThemeType</key>
+		<string>Dark</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
