@@ -19,13 +19,13 @@
 				<key>FixHPET</key>
 				<true/>
 				<key>FixIPIC</key>
-				<false/>
+				<true/>
 				<key>FixMutex</key>
 				<true/>
 				<key>FixRTC</key>
-				<false/>
+				<true/>
 				<key>FixTMR</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
