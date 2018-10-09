@@ -409,13 +409,7 @@
 				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con1-alldata</key>
-				<data>AQUSAAAIAACHAAAA</data>
-				<key>#framebuffer-con1-flags</key>
-				<data>BgAAAA==</data>
-				<key>#framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>#framebuffer-con1-type</key>
-				<data>AAQAAA==</data>
+				<data>AQUSAAAEAACHAAAA</data>
 				<key>framebuffer-con2-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con2-flags</key>
