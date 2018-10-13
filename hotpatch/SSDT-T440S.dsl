@@ -9,7 +9,7 @@ DefinitionBlock("", "SSDT", 2, "T440S", "_T440S", 0)
     #include "SSDT-IMEI.dsl"
     #include "SSDT-PNLF.dsl"
     #include "SSDT-ALS0.dsl"
-    #include "SSDT-DEH01.dsl"
+    //#include "SSDT-DEH01.dsl"
     #include "SSDT-USB.dsl"
     #include "SSDT-HDEF.dsl"
     #include "SSDT-HDAU.dsl"

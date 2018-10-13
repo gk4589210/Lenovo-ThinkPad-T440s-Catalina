@@ -1,4 +1,5 @@
 // Lenovo ThinkPad T440S USB Port Injector.
+// Supports TouchScreen.
 // FingerPrint Reader Disabled (Not supported on macOS).
 // Fixed AutoStart after Shutdown if a USB device is plugged in.
 
@@ -12,6 +13,30 @@ DefinitionBlock ("", "SSDT", 2, "T440S", "_USB", 0)
 
         Name(RMCF, Package()
         {
+            "HUB1", Package()
+            {
+                "port-count", Buffer() { 8, 0, 0, 0 },
+                "ports", Package()
+                {
+                    "HP15", Package() // TouchScreen
+                    {
+                        "portType", 255,
+                        "port", Buffer() { 5, 0, 0, 0 },
+                    },
+                },
+            },
+            "EH01", Package()
+            {
+                "port-count", Buffer() { 8, 0, 0, 0 },
+                "ports", Package()
+                {
+                    "PR11", Package()
+                    {
+                        "UsbConnector", 255,
+                        "port", Buffer() { 1, 0, 0, 0 },
+                    },
+                },
+            },            
             "8086_9c31", Package()
             {
                 "port-count", Buffer() { 13, 0, 0, 0 },
