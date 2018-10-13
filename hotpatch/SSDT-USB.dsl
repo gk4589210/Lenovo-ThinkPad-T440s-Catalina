@@ -20,7 +20,7 @@ DefinitionBlock ("", "SSDT", 2, "T440S", "_USB", 0)
                 {
                     "HP15", Package() // TouchScreen
                     {
-                        "portType", 255,
+                        "portType", 2,
                         "port", Buffer() { 5, 0, 0, 0 },
                     },
                 },
