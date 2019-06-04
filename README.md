@@ -2,7 +2,7 @@
 
 #
 
-# macOS X Mojave (Lenovo ThinkPad T440)
+# macOS Mojave (Lenovo ThinkPad T440)
 
 #
 
