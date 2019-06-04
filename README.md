@@ -1,3 +1,5 @@
+![Screenshot](misc/logo/screenshot.png)
+
 # macOS X Mojave (Lenovo ThinkPad T440)
 
 #
