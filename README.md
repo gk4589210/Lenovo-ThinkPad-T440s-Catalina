@@ -1,6 +1,6 @@
-![Screenshot](misc/logo/screenshot.png)
-
 # macOS Mojave (Lenovo ThinkPad T440)
+
+![Screenshot](misc/logo/screenshot.png)
 
 ## Credits
 
