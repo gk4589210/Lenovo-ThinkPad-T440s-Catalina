@@ -1,4 +1,4 @@
-# Tools For Lenovo T450 Hackintosh Setup
+# Tools For Lenovo T440 Hackintosh Setup
 
 This folder contains a number of different useful tools I find helpful with setting up the full macOS system on the Lenovo ThinkPad T450 Ultrabook. You may not find them useful but they're here for anyone to checkout and use if they want.
 
@@ -10,12 +10,6 @@ This folder contains a number of different useful tools I find helpful with sett
 
 #
 
-### HD Graphics 5500
-
-- Different monitor configurations for my personal setup. HIDPI is enabled and working very well. The clarity is very impressive, other tools for configuring proper DVMT options on systems with locked BIOS configurations.
-
-#
-
 ### HomeEndFix
 
 - Fixes the Home and End button configurations on ThinkPad Hackintosh setups to match Macintosh hardware in the macOS environment.
@@ -24,7 +18,7 @@ This folder contains a number of different useful tools I find helpful with sett
 
 ### Hot Patching
 
-- All of my current files used for HotPatching Lenovo ThinkPad T450 and a bunch of other ".dsl" files which can be used as well. 
+- All of sniiki's current files used for HotPatching Lenovo ThinkPad T440 and a bunch of other ".dsl" files which can be used as well. 
 
 #
 
@@ -40,15 +34,9 @@ This folder contains a number of different useful tools I find helpful with sett
 
 #
 
-### SSDTPRGen
+### ssdtPRGen
 
 - Script for creating a custom SSDT.aml file for your hardware in order to have a functional power configuration for your processor. (Credit goes to Piker for creating this script).
-
-#
-
-### Static Patching
-
-- Files for Static Patching the Lenovo ThinkPad T450 Ultrabook. This is my personal configuration that I patched myself completely with the help of different guides I found online. This configuration may function on some T450's but no other hardware will work with it like my Hot Patched setup will. Static Patched DSDTs are unique and require that the owner of the actual computer make their own Static Patched configuration by patching their own DSDT.dsl using patches and the maciASL application for macOS.
 
 #
 
