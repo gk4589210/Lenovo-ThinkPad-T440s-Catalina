@@ -10,6 +10,12 @@ This folder contains a number of different useful tools I find helpful with sett
 
 #
 
+### BIOS Folder
+
+- Contains pictures which show the proper BIOS settings required for the system to boot properly. Anything that show "Permanently Disabled" as an option can be substituted by the "Disable" action instead if you would rather have the option to utilize the features down the road.
+
+#
+
 ### HomeEndFix
 
 - Fixes the Home and End button configurations on ThinkPad Hackintosh setups to match Macintosh hardware in the macOS environment.
