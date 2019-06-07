@@ -537,6 +537,8 @@
 		<dict>
 			<key>#IntelGFX</key>
 			<string>0x04128086</string>
+			<key>IntelGFX</key>
+			<string>0x04128086</string>
 		</dict>
 		<key>HDMIInjection</key>
 		<true/>
@@ -579,7 +581,7 @@
 				<integer>1</integer>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AAAmDA==
+				BgAmCg==
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
