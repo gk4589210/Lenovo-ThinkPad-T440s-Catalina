@@ -15,7 +15,7 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP</key>
-				<true/>
+				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixADP1</key>
@@ -51,20 +51,6 @@
 					<key>Replace</key>
 					<data>
 					WE9TSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>EXP to RP0</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RVhQ
-					</data>
-					<key>Replace</key>
-					<data>
-					UlAw
 					</data>
 				</dict>
 				<dict>
@@ -498,9 +484,9 @@
 				<true/>
 			</dict>
 			<key>NoDynamicExtract</key>
-			<false/>
+			<true/>
 			<key>NoOemTableId</key>
-			<false/>
+			<true/>
 			<key>PluginType</key>
 			<string>1</string>
 		</dict>
@@ -541,7 +527,7 @@
 			<string>0x04128086</string>
 		</dict>
 		<key>HDMIInjection</key>
-		<true/>
+		<false/>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
@@ -625,7 +611,7 @@
 			<false/>
 		</dict>
 		<key>UseIntelHDMI</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -850,6 +836,8 @@
 		<string>Apple Inc.</string>
 		<key>Memory</key>
 		<dict>
+			<key>Channels</key>
+			<integer>1</integer>
 			<key>SlotCount</key>
 			<integer>2</integer>
 		</dict>
@@ -873,7 +861,7 @@
 		<key>InjectKexts</key>
 		<string>Detect</string>
 		<key>InjectSystemID</key>
-		<true/>
+		<false/>
 	</dict>
 </dict>
 </plist>
