@@ -1,12 +1,12 @@
-# Patched T440 ACPI Files
+# Patched T450 ACPI Files
 
-Patched .aml configuration files are inserted here and Clover will inject them at boot time in order to modify the ACPI codebase with all changes present in the individual files. EITHER USE THE INDIVIDUAL ".aml" FILES OR THE SINGLE "SSDT-T440.aml" FILE IN THE "AIO" FOLDER. DO NOT INCLUDE BOTH OPTIONS TOGETHER OR YOUR SYSTEM WONT BOOT. THE SINGLE "SSDT-T440.aml" IS JUST A COMBINATION OF ALL INDIVIDUAL HOT PATCHES IN ONE SINGLE FILE.  
+Patched .aml configuration files are inserted here and Clover will inject them at boot time in order to modify the ACPI codebase with all changes present in the individual files. EITHER USE THE INDIVIDUAL ".aml" FILES OR THE SINGLE "SSDT-T450.aml" FILE IN THE "AIO" FOLDER. DO NOT INCLUDE BOTH OPTIONS TOGETHER OR YOUR SYSTEM WONT BOOT. THE SINGLE "SSDT-T450.aml" IS JUST A COMBINATION OF ALL INDIVIDUAL HOT PATCHES IN ONE SINGLE FILE.  
 
 #
 
 ### config.plist
 
-- The configuration file that should be used with Lenovo ThinkPad T440 systems. Replace the config.plist made for my T450 setup in the main folder with this config.plist file for proper functionality. The main difference is with the graphics configuration since the T450 uses Broadwell integrated graphics and the T440 uses Haswell integrated graphics.
+- The configuration file that should be used with Lenovo ThinkPad T450 systems.
 
 #
 
@@ -24,7 +24,7 @@ Patched .aml configuration files are inserted here and Clover will inject them a
 
 ### AML Folder
 
-- Single Hot Patch files used with the Lenovo ThinkPad T440 Hot Patched configuration. These patches come straight from Sniiki's T440s configuration.
+- Single Hot Patch files used with the Lenovo ThinkPad T450 Hot Patched configuration. These patches come straight from Sniiki's T440s configuration.
 
 #
 
