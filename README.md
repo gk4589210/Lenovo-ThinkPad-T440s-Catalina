@@ -4,7 +4,8 @@
 
 ```  
 - Intel 4th Generation Architecture (Haswell)
-- Intel HD Graphics 5500
+- Intel HD Graphics 4400
+- Realtek ALC3232/ALC292 Audio Codec
 - Intel Series 8 Chipset Family
 - macOS Catalina Catalina.x
 - Hot Patched Clover Configuration
@@ -55,7 +56,7 @@ The Hackintosh Community:
 - Intel Core i7-5600U | Haswell (4th Generation) 
 - Dual Core @ 2.7 GHz (up to 3.7 GHz with Turbo Boost) 
 - Crucial 16GB (2x8) | DDR3 @ 1600 MHz | (Model CT102464BF160B.M16) | Pulled from a 2014 MacBook Pro
-- Intel HD 5500 Graphics | 1536 MB VRAM | Full QE/CI & Metal Support  | HDMI Out @ 3840x2160 Max Resolution
+- Intel HD 4400 Graphics | 1536 MB VRAM | Full QE/CI & Metal Support  | HDMI Out @ 3840x2160 Max Resolution
 - LG 1080P Full High Definition IPS Display LP140WF6(SP)(C2) (Replaced stock 1600x900 TN Display)
 - 3 Solid State Drives | 500G Samsung 850 Evo SATA | 1TB Samsung 840 Evo M.2 | 500G Samsung 840 Evo M.2
 - Realtek SDHC | 3x USB 3.1 | HDMI | Intel Gigabit LAN | SIM card  | AUX In/Out | Microphone | HD Webcam 
@@ -102,7 +103,7 @@ The card is a MIMO 3x3 (use one of the WWAN antennas for the third antenna probe
         
 ## Support For Similar Hardware:
   
-This post contain basically everything necessary to install macOS Catalina on a Lenovo ThinkPad T440 as well as most Haswell Lenovo Laptops from 2014-2016 with Intel HD5500 Graphics on either the i5 or i7 processors if you opt to use my Static Patched ACPI files. This will almost certainly require that you patch your own DSDT though. You can find information below regarding the actual process but you may also try mine out and see if it works (only if you have a T440 or T440s though). Any other device will require that you patch your own DSDT. Take a look in "utilities/ACPI" for my files and use them as a guide to patch your own DSDT if you choose to go with static patching for whatever reason. I strongly recommend that you choose to stick with the Hot Patched configuration as it provides a number of benefits over the old method of Static Patching. First its already complete in this build which means you can just delete the contents of your "/Volumes/ESP/EFI/CLOVER" folder and then copy and paste the entire setup I've created into that same CLOVER folder. Hot Patching is capable of universal support across a wide range of comparable hardware so even if your laptop in not a T440 or Lenovo for that matter but it contains a Haswell processor and HD Graphics 5500 then this setup will almost certainly work for you (with minor adjustments possibly needed in the config.plist or with kexts for other hardware not present in my configuration). The most beneficial reason for choosing the Hot Patched method though is that it requires no knowledge of how to patch an DSDT because Clover takes care of everything for you and survives BIOS changes and updates! Anyone who can copy and paste can use this build so long as there base configuration matches mine (refer to the first section of this guide for that information).
+This post contain basically everything necessary to install macOS Catalina on a Lenovo ThinkPad T440 as well as most Haswell Lenovo Laptops from 2014-2016 with Intel HD4400 Graphics on either the i5 or i7 processors if you opt to use my Static Patched ACPI files. This will almost certainly require that you patch your own DSDT though. You can find information below regarding the actual process but you may also try mine out and see if it works (only if you have a T440 or T440s though). Any other device will require that you patch your own DSDT. Take a look in "utilities/ACPI" for my files and use them as a guide to patch your own DSDT if you choose to go with static patching for whatever reason. I strongly recommend that you choose to stick with the Hot Patched configuration as it provides a number of benefits over the old method of Static Patching. First its already complete in this build which means you can just delete the contents of your "/Volumes/ESP/EFI/CLOVER" folder and then copy and paste the entire setup I've created into that same CLOVER folder. Hot Patching is capable of universal support across a wide range of comparable hardware so even if your laptop in not a T440 or Lenovo for that matter but it contains a Haswell processor and HD Graphics 4400 then this setup will almost certainly work for you (with minor adjustments possibly needed in the config.plist or with kexts for other hardware not present in my configuration). The most beneficial reason for choosing the Hot Patched method though is that it requires no knowledge of how to patch an DSDT because Clover takes care of everything for you and survives BIOS changes and updates! Anyone who can copy and paste can use this build so long as there base configuration matches mine (refer to the first section of this guide for that information).
 
   
 ## Installing Clover Boot-loader & macOS Catalina:
