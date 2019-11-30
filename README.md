@@ -1,4 +1,4 @@
-![Screenshot](misc/logo/screenshot.png)
+![Screenshot](EFI/CLOVER/misc/logo/screenshot.png)
 
 # macOS Catalina (Lenovo ThinkPad T440)
 
