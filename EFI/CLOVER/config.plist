@@ -16,6 +16,8 @@
 				<true/>
 				<key>AddMCHC</key>
 				<true/>
+				<key>AddPNLF</key>
+				<false/>
 				<key>FixADP1</key>
 				<true/>
 				<key>FixHPET</key>
@@ -29,12 +31,26 @@
 				<key>FixSBUS</key>
 				<true/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 				<key>FixWAK</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0ZYMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					SUdQVQ==
+					</data>
+				</dict>
 				<dict>
 					<key>Comment</key>
 					<string>_DSM ---&gt; XDSM</string>
@@ -79,76 +95,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>VID ---&gt; IGPU #1</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					VklEXwhfQURSDAAAAgA=
-					</data>
-					<key>Replace</key>
-					<data>
-					SUdQVQhfQURSDAAAAgA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>VID ---&gt; IGPU #2</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					UENJMFZJRF8=
-					</data>
-					<key>Replace</key>
-					<data>
-					UENJMElHUFU=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>SMBU ---&gt; SBUS</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					U01CVQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					U0JVUw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>HDAS ----&gt; HDEF</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SERBUw==
-					</data>
-					<key>Replace</key>
-					<data>
-					SERFRg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>HPET._STA ---&gt; XSTA</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					FBJfU1RBAA==
-					</data>
-					<key>Replace</key>
-					<data>
-					FBJYU1RBAA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>EHC1 ---&gt; EH01</string>
 					<key>Disabled</key>
 					<false/>
@@ -165,7 +111,7 @@
 					<key>Comment</key>
 					<string>EHC2 ---&gt; EH02</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					RUhDMg==
@@ -173,20 +119,6 @@
 					<key>Replace</key>
 					<data>
 					RUgwMg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>IGBE ---&gt; GLAN</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SUdCRQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					R0xBTg==
 					</data>
 				</dict>
 				<dict>
@@ -215,6 +147,20 @@
 					<key>Replace</key>
 					<data>
 					SERBVQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>HPET._STA ---&gt; XSTA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					FBJfU1RBAA==
+					</data>
+					<key>Replace</key>
+					<data>
+					FBJYU1RBAA==
 					</data>
 				</dict>
 				<dict>
@@ -553,24 +499,56 @@
 					hlwvBV9TQl9QQ0kwTFBDX0VDX19CQVRDCgM=
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU 1 (Thinkpad)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					UENJMFZJRF8=
+					</data>
+					<key>Replace</key>
+					<data>
+					UENJMElHUFU=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PCI0.VID to IGPU 2 (Thinkpad)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					VklEXwhfQURSDAAAAgA=
+					</data>
+					<key>Replace</key>
+					<data>
+					SUdQVQhfQURSDAAAAgA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SERBUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
 			</array>
 			<key>SlpSmiAtWake</key>
-			<true/>
+			<false/>
 			<key>SuspendOverride</key>
-			<true/>
+			<false/>
 		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT.aml</string>
-			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-PluginType1.aml</string>
-		</array>
 		<key>DropTables</key>
 		<array>
-			<dict>
-				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
@@ -602,7 +580,7 @@
 			<key>NoDynamicExtract</key>
 			<true/>
 			<key>NoOemTableId</key>
-			<true/>
+			<false/>
 			<key>UseSystemIO</key>
 			<false/>
 		</dict>
@@ -612,7 +590,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1 debug=0x100</string>
+		<string>dart=0 -cdfon kext-dev-mode=1</string>
 		<key>HibernationFixup</key>
 		<false/>
 		<key>NeverHibernate</key>
@@ -622,11 +600,11 @@
 		<key>Secure</key>
 		<false/>
 		<key>SkipHibernateTimeout</key>
-		<true/>
+		<false/>
 		<key>Timeout</key>
 		<integer>10</integer>
 		<key>XMPDetection</key>
-		<false/>
+		<string>Yes</string>
 	</dict>
 	<key>Comment</key>
 	<string>Lenovo ThinkPad T450 Hackintosh | Broadwell | Author: Jsassu20 (James Sassu) | macOS Catalina</string>
@@ -635,11 +613,16 @@
 		<key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
-			<false/>
+			<true/>
 			<key>Inject</key>
 			<string>No</string>
 			<key>ResetHDA</key>
-			<false/>
+			<true/>
+		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>IntelGFX</key>
+			<string>0x04128086</string>
 		</dict>
 		<key>ForceHPET</key>
 		<false/>
@@ -655,40 +638,88 @@
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
+				<key> patch0</key>
+				<string>Enable internal display after sleep for 0x0a2e0008 on 10.10.2-10.12.x (c) syscl</string>
+				<key> patch1</key>
+				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				BgAmCg==
 				</data>
 				<key>device-id</key>
-				<string>Graphics</string>
-				<key>framebuffer-con1-alldata</key>
 				<data>
-				AQUSAAAEAACHAAAA
+				EgQAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
+				<integer>0</integer>
+				<key>framebuffer-con1-flags</key>
 				<data>
-				AQAAAA==
+				BgAAAA==
 				</data>
-				<key>framebuffer-con2-alldata</key>
+				<key>framebuffer-con1-pipe</key>
 				<data>
-				AgQSABAAAACHAAAA
+				EgAAAA==
+				</data>
+				<key>framebuffer-con1-type</key>
+				<data>
+				AAgAAA==
 				</data>
 				<key>framebuffer-con2-enable</key>
+				<integer>0</integer>
+				<key>framebuffer-con2-flags</key>
 				<data>
-				AQAAAA==
+				BgAAAA==
+				</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
+				<key>framebuffer-con2-type</key>
+				<data>
+				AAgAAA==
+				</data>
+				<key>framebuffer-con3-enable</key>
+				<integer>0</integer>
+				<key>framebuffer-con3-flags</key>
+				<data>
+				BgAAAA==
+				</data>
+				<key>framebuffer-con3-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
+				<key>framebuffer-con3-type</key>
+				<data>
+				AAgAAA==
 				</data>
 				<key>framebuffer-cursormem</key>
 				<data>
 				AACQAA==
 				</data>
 				<key>framebuffer-patch-enable</key>
+				<integer>0</integer>
+				<key>framebuffer-patch0-enable</key>
+				<integer>0</integer>
+				<key>framebuffer-patch0-find</key>
 				<data>
-				AQAAAA==
+				AQAAAEAAAAAeAAAABQUJAQ==
 				</data>
-				<key>framebuffer-unifiedmem</key>
+				<key>framebuffer-patch0-replace</key>
 				<data>
-				AAAAgA==
+				AQAAAEAAAAAPAAAABQUJAQ==
 				</data>
+				<key>framebuffer-patch1-enable</key>
+				<integer>0</integer>
+				<key>framebuffer-patch1-find</key>
+				<data>
+				AQAAAEAAAAAeAgAABQUJAQ==
+				</data>
+				<key>framebuffer-patch1-replace</key>
+				<data>
+				AQAAAEAAAAAfAgAABQUJAQ==
+				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
 			<dict>
@@ -701,10 +732,6 @@
 				<string>Audio Device</string>
 				<key>layout-id</key>
 				<integer>28</integer>
-				<key>model</key>
-				<string>Realtek High Definition Audio Controller (Intel Broadwell-U Wildcat Point-LP Audio)</string>
-				<key>name</key>
-				<string>Realtek High Definition Audio</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x3,0x0)</key>
 			<dict>
@@ -717,10 +744,6 @@
 				<string>Audio Device</string>
 				<key>layout-id</key>
 				<integer>28</integer>
-				<key>model</key>
-				<string>Intel Broadwell-U HDMI Audio Controller</string>
-				<key>name</key>
-				<string>HDMI Output</string>
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
@@ -791,12 +814,14 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<false/>
+			<true/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
 		<key>LoadVBios</key>
 		<false/>
+		<key>ig-platform-id</key>
+		<string>0x0a260006</string>
 	</dict>
 	<key>Information</key>
 	<dict>
@@ -899,6 +924,89 @@
 				</data>
 			</dict>
 		</array>
+		<key>KextsToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Boot graphics glitch, 10.13 beta (based on denskop patch)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQAAdSI=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA6yI=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch 10.14.1 18B50C (credits DalianSky)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/sPD4OPBAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.1</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/sPkJCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Change 15 port limit</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/sPD4MJBQAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/sPkJCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>1536MB -&gt; 2048MB for HD4200_4400_4600 Mobile</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQMDAwAAAAIAADABAABgAAAAAGA=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>
+				AQMDAwAAAAIAADABAACQAAAAAIA=
+				</data>
+			</dict>
+		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -909,11 +1017,6 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>Memory</key>
-		<dict>
-			<key>SlotCount</key>
-			<integer>2</integer>
-		</dict>
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
