@@ -265,7 +265,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-cdfon -igfxnohdmi</string>
+		<string>-cdfon -igfxnohdmi alcid=32</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
