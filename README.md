@@ -1,13 +1,13 @@
 ![Screenshot](EFI/CLOVER/misc/logo/screenshot.png)
 
-# macOS Catalina (Lenovo ThinkPad T440)
+# macOS Catalina (Lenovo ThinkPad T440s)
 
 ```  
 - Intel 4th Generation Architecture (Haswell)
 - Intel HD Graphics 4400
 - Realtek ALC3232/ALC292 Audio Codec
 - Intel Series 8 Chipset Family
-- macOS Catalina Catalina.x
+- macOS Catalina Catalina
 - Hot Patched Clover Configuration
 - AirPort Extreme (Broadcom BCM94360CSAX & NGFF A/E Adapter) * Recommended Upgrade
 - All native macOS Catalina features work as long as you upgrade the WiFi card to a supported configuration
