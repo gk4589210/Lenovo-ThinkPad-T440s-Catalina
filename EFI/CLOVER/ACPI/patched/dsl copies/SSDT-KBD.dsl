@@ -1,104 +1,133 @@
-// Lenovo ThinkPad T440S Keyboard Map.
-// Lenovo ThinkPad T440S ClickPad Configuration.
-
-#ifndef NO_DEFINITIONBLOCK
-DefinitionBlock("", "SSDT", 2, "T440S", "_KBD", 0)
+DefinitionBlock ("", "SSDT", 2, "T440S", "_KBD", 0x00000000)
 {
-#endif
-    External (_SB.PCI0.LPC.EC, DeviceObj)
-    External (_SB.PCI0.LPC.KBD, DeviceObj)
-    
+    External (_SB_.PCI0.LPC_.EC__, DeviceObj)
+    External (_SB_.PCI0.LPC_.KBD_, DeviceObj)
+
     Scope (_SB.PCI0.LPC.EC)
     {
-        Method (_Q14, 0, NotSerialized)  // (F15) Brightness Up
+        Method (_Q14, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x0406)
         }
-        Method (_Q15, 0, NotSerialized)  // (F14) Brightness Down
+
+        Method (_Q15, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x0405)
         }
-        Method (_Q6A, 0, NotSerialized)  // (F4) Microphone Mute - Siri
+
+        Method (_Q6A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x033E)
         }
-        Method (_Q16, 0, NotSerialized)  // Projector / Mirror mode
+
+        Method (_Q16, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x046E)
         }
-        Method (_Q64, 0, NotSerialized)  // (F8) Wireless ON/OFF - Notification Center
+
+        Method (_Q64, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x0342)
         }
-        Method (_Q66, 0, NotSerialized)  // (F16) Settings - System Preferences
+
+        Method (_Q66, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x0367)
         }
-        Method (_Q67, 0, NotSerialized)  // (F17) Windows Search - Spotlight Search
+
+        Method (_Q67, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x0368)
         }
-        Method (_Q68, 0, NotSerialized)  // (F18) App Switcher - Mission Control
+
+        Method (_Q68, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x0369)
         }
-        Method (_Q69, 0, NotSerialized)  // (F19) Start Menu - Launchpad
+
+        Method (_Q69, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (KBD, 0x036A)
         }
     }
-    
-    Scope(_SB.PCI0.LPC.KBD)
+
+    Scope (_SB.PCI0.LPC.KBD)
     {
-        // Select specific configuration in VoodooPS2Trackpad.kext
-        Method(_DSM, 4)
+        Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
         {
-            If (!Arg2) { Return (Buffer() { 0x03 } ) }
-            Return (Package()
+            If (!Arg2)
             {
-                "RM,oem-id", "LENOVO",
-                "RM,oem-table-id", "Thinkpad_Clickpad",
+                Return (Buffer (One)
+                {
+                     0x03                                             // .
+                })
+            }
+
+            Return (Package (0x04)
+            {
+                "RM,oem-id", 
+                "LENOVO", 
+                "RM,oem-table-id", 
+                "Thinkpad_Clickpad"
             })
         }
-        // Overrides (the example data here is default in the Info.plist)
-        Name(RMCF, Package()
+
+        Name (RMCF, Package (0x04)
         {
-            "Synaptics TouchPad", Package()
+            "Synaptics TouchPad", 
+            Package (0x2A)
             {
-                "BogusDeltaThreshX", 100,
-                "BogusDeltaThreshY", 100,
-                "Clicking", ">y",
-                "DragLockTempMask", 0x40004,
-                "DynamicEWMode", ">n",
-                "FakeMiddleButton", ">n",
-                "HWResetOnStart", ">y",
-                //"ForcePassThrough", ">y",
-                //"SkipPassThrough", ">y",
-                "PalmNoAction When Typing", ">y",
-                "ScrollResolution", 800,
-                "SmoothInput", ">y",
-                "UnsmoothInput", ">y",
-                "Thinkpad", ">y",
-                "EdgeBottom", 0,
-                "FingerZ", 30,
-                "MaxTapTime", 100000000,
-                "MouseMultiplierX", 8,
-                "MouseMultiplierY", 8,
-                "MouseScrollMultiplierX", 8,
-                "MouseScrollMultiplierY", 8,
-                "TrackpointScrollYMultiplier", 1, //Change this value to 0xFFFF in order to inverse the vertical scroll direction of the Trackpoint when holding the middle mouse button.
-                "TrackpointScrollXMultiplier", 1, //Change this value to 0xFFFF in order to inverse the horizontal scroll direction of the Trackpoint when holding the middle mouse button.
-            },
-            "Keyboard", Package()
+                "BogusDeltaThreshX", 
+                0x64, 
+                "BogusDeltaThreshY", 
+                0x64, 
+                "Clicking", 
+                ">y", 
+                "DragLockTempMask", 
+                0x00040004, 
+                "DynamicEWMode", 
+                ">n", 
+                "FakeMiddleButton", 
+                ">n", 
+                "HWResetOnStart", 
+                ">y", 
+                "PalmNoAction When Typing", 
+                ">y", 
+                "ScrollResolution", 
+                0x0320, 
+                "SmoothInput", 
+                ">y", 
+                "UnsmoothInput", 
+                ">y", 
+                "Thinkpad", 
+                ">y", 
+                "EdgeBottom", 
+                Zero, 
+                "FingerZ", 
+                0x1E, 
+                "MaxTapTime", 
+                0x05F5E100, 
+                "MouseMultiplierX", 
+                0x08, 
+                "MouseMultiplierY", 
+                0x08, 
+                "MouseScrollMultiplierX", 
+                0x08, 
+                "MouseScrollMultiplierY", 
+                0x08
+            }, 
+
+            "Keyboard", 
+            Package (0x02)
             {
-                "Custom PS2 Map", Package()
+                "Custom PS2 Map", 
+                Package (0x02)
                 {
-                    Package() { },
-                    "e037=64", // PrtSc=F13
-                },
-            },
+                    Package (0x00){}, 
+                    "e037=64"
+                }
+            }
         })
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
+
